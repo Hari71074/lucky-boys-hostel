@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Boy's Hostel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Section -->
+    <section id="welcome-section">
+        <div class="container">
+            <h1>Welcome to Lucky Boy's Hostel</h1>
+            <p>Your gateway to a homely atmosphere, hygienic facilities, and great food!</p>
+            <button id="register-btn" class="btn-primary">Register</button>
+        </div>
+    </section>
+
+    <!-- Registration Popup -->
+    <div id="registration-popup" class="popup">
+        <div class="popup-content">
+            <h2>Register Now</h2>
+            <form action="https://formspree.io/f/xdkognoz" method="POST" id="registrationForm">
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div>
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+                </div>
+                <div>
+                    <label for="purpose">Purpose (Student/Job):</label>
+                    <input type="text" id="purpose" name="purpose" placeholder="Enter your purpose" required>
+                </div>
+                <div class="payment-section">
+                    <label for="payment">Payment Option:</label>
+                    <select id="payment" name="payment" required>
+                        <option value="daywise">Daywise (₹299 per day)</option>
+                        <option value="monthlywise">Monthlywise (₹3999 per month)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-primary">Submit Registration</button>
+            </form>
+            <button id="close-popup" class="btn-secondary">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact Us: 9381467119 | Email: <a href="mailto:prashanthimaroju143@gmail.com">prashanthimaroju143@gmail.com</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

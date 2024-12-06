@@ -1,0 +1,190 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background: #1c1c1c; /* Dark background for a modern feel */
+    color: #e0e0e0; /* Light text */
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Welcome Section */
+#welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 40px;
+    background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 1s ease-out;
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    color: #f5a623; /* Warm Yellow */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    animation: textGlow 1.5s ease-in-out infinite alternate;
+}
+
+#welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#welcome-section button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #f5a623; /* Neon Yellow */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(245, 166, 35, 0.7);
+    transform: scale(1);
+    transition: all 0.3s ease;
+    animation: neonPulse 2s infinite alternate;
+}
+
+#welcome-section button:hover {
+    background-color: #f0b41f;
+    box-shadow: 0 0 40px rgba(245, 166, 35, 1);
+    transform: scale(1.1);
+}
+
+/* Neon Glow Animation */
+@keyframes neonPulse {
+    0% {
+        box-shadow: 0 0 20px rgba(245, 166, 35, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 40px rgba(245, 166, 35, 1);
+    }
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px #f5a623, 0 0 10px #f5a623, 0 0 15px #f5a623;
+    }
+    100% {
+        text-shadow: 0 0 20px #f5a623, 0 0 30px #f5a623, 0 0 45px #f5a623;
+    }
+}
+
+/* Popup Registration Form */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #333; /* Dark Grey */
+    padding: 40px;
+    border-radius: 20px;
+    width: 60%;
+    max-width: 600px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    transform: scale(0.9);
+    opacity: 0;
+    animation: fadeInPopup 0.5s forwards;
+}
+
+.popup.show {
+    display: flex;
+}
+
+@keyframes fadeInPopup {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Inputs & Buttons */
+input[type="text"], input[type="tel"], select {
+    padding: 15px;
+    font-size: 1.2rem;
+    border: 2px solid #555;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #444;
+    color: #fff;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, select:focus {
+    border-color: #f5a623;
+}
+
+/* Submit & Close Buttons */
+button {
+    padding: 15px;
+    font-size: 1.2rem;
+    background-color: #f5a623;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 0 15px rgba(245, 166, 35, 0.7);
+}
+
+button:hover {
+    background-color: #f0b41f;
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(245, 166, 35, 1);
+}
+
+#close-popup {
+    margin-top: 20px;
+    background-color: #444;
+    box-shadow: none;
+}
+
+#close-popup:hover {
+    background-color: #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
